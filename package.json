@@ -1,0 +1,24 @@
+{
+  "name": "fintrosnews",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/luiz-pereira/FintrosNews.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/luiz-pereira/FintrosNews/issues"
+  },
+  "homepage": "https://github.com/luiz-pereira/FintrosNews#readme",
+  "dependencies": {
+    "grabity": "^1.0.5",
+    "styled-components": "^5.0.1"
+  }
+}

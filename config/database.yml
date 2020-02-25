@@ -1,0 +1,22 @@
+development:
+  adapter: postgresql
+  database: fintrosnews_db_development
+  pool: 5
+  timeout: 5000
+  username: postgres
+  password: Pg-password
+test:
+  adapter: postgresql
+  database: fintrosnews_db_test
+  pool: 5
+  timeout: 5000
+  username: postgres
+  password: Pg-password
+
+production:
+  adapter: postgresql
+  database: fintrosnews_db_production
+  pool: 5
+  timeout: 5000
+  username: postgres
+  password: Pg-password
