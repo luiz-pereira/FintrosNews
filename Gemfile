@@ -44,10 +44,4 @@ gem "foreman", "~> 0.87.0"
 
 gem "pg", "~> 1.2"
 
-gem "sqlite", "~> 1.0"
-
-gem "sqlite3", "~> 1.4"
-
-
-
 gem "httparty", "~> 0.18.0"
