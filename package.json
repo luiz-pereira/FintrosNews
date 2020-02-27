@@ -21,8 +21,5 @@
   "dependencies": {
     "grabity": "^1.0.5",
     "styled-components": "^5.0.1"
-	},
-	"scripts": {
-    "build": "cd client"
-  }
+	}
 }

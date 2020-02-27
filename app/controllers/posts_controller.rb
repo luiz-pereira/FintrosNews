@@ -1,9 +1,5 @@
 class PostsController < ApplicationController
 
-	def index
-		render json: "Welcome to the API".to_json
-	end
-
 	def update_post_list
 		# check if i have the most up-to-date 1000 stories
 		newstories = []
