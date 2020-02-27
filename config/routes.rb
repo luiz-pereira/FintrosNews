@@ -2,7 +2,7 @@ Rails.application.routes.draw do
 	
   resources :posts
 
-		post 'api/posts/refresh' => 'posts#update_post_list'
+		get 'api/posts/refresh' => 'posts#update_post_list'
 		post 'api/posts/test' => 'posts#test'
 
 		get 'api/posts/all' => 'posts#all_posts'
