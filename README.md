@@ -1,1 +1,1 @@
-# FintrosNews
+# Fintros News
