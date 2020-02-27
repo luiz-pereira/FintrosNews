@@ -24,7 +24,6 @@ end
 def img_from_url(url)
 	if url
 		begin
-			binding.pry
 			doc = Nokogiri::HTML(URI.open(url))	
 		if doc
 			attrib = doc.css("meta[property='og:image']")
