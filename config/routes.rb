@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+	root to: 'posts#index'
   resources :posts
 
 		post 'api/posts/refresh' => 'posts#update_post_list'
