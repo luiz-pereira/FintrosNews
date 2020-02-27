@@ -1,7 +1,11 @@
 {
   "name": "client",
   "version": "0.1.0",
-  "private": true,
+	"private": true,
+	"engines": {
+		"npm": "6.13.2",
+		"node": "13.0.1"
+ 	},
   "proxy": "http://localhost:3001/",
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",

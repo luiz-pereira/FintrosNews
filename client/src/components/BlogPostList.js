@@ -15,10 +15,12 @@ const BlogPostList = props => {
 
 	}
 
+	document.body.id = `body-${props.mode}`
+
 	return(
-		<div>
-			<ul>
-				{filtered().map(post => <li><BlogPost getPicturesforPost={props.getPicturesforPost} post={post}/></li>)}
+		<div className='posts'>
+			<ul className='posts'>
+				{filtered().map(post => <li className={`posts ${props.mode}`}><BlogPost post={post}/></li>)}
 			</ul>
 		</div>	
 	)

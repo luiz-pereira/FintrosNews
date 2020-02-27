@@ -1,19 +1,125 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
+
 .App {
   text-align: center;
 }
 
-* {margin: 0; padding: 0;}
+* {
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+		font-family: 'Poppins', sans-serif
+	}
 
- li {
+	#body-dark{
+		background-color: #333;
+		color: #eee;
+	}
+
+	#body-light{
+		background-color: azure;
+		color: #333;
+	}
+
+	div {
+		display: block;
+	}
+
+	.post-container {
+		display: flex;
+    flex-wrap: wrap;
+    height: initial;
+    -webkit-box-pack: start;
+    justify-content: flex-start;
+			 width: 100%;
+			 
+	}
+
+	hr {
+		margin-top: 0px;
+		margin-left: 30%;
+	}
+
+	.post-image-container {
+		margin-left: 0px;
+		margin-right: 30px;
+    width: 25%;
+	}
+
+ li.posts {
    padding: 10px;
    overflow: auto;
  }
 	
- li:hover {
-   background: #eee;
+ li.posts:hover {
+   background: aliceblue;
    cursor: pointer;
  }
 
- ul {
+ li.posts.dark:hover {
+	background: dimgrey;
+	cursor: pointer;
+}
+
+ ul.posts {
 	 list-style-type: none;
  }
+
+ nav.navBar {
+	margin: 50px;
+	height: auto;
+}
+
+ul.navBar {
+  overflow: auto;
+  list-style-type: none;
+}
+
+li.navBar {
+  height: 25px;
+  float: left;
+  margin-right: 0px;
+  border-right: 1px solid #aaa;
+  padding: 0 20px;
+}
+
+li.navBar:last-child {
+  border-right: none;
+}
+
+li.navBar {
+  text-decoration: none;
+  color: #ccc;
+  font: 23.5px/1 Helvetica, Verdana, sans-serif;
+  text-transform: uppercase;
+  -webkit-transition: all 0.5s ease;
+}
+
+li.navBar.dark {
+  text-decoration: none;
+  color: #ccc;
+  font: 23.5px/1 Helvetica, Verdana, sans-serif;
+  text-transform: uppercase;
+  -webkit-transition: all 0.5s ease;
+}
+
+li.navBar:hover {
+	color: #666;
+	cursor: pointer;
+}
+
+li.navBar.active {
+  font-weight: bold;
+  color: #333;
+}
+
+li.navBar.active.dark {
+  font-weight: bold;
+  color: #eee;
+}
+
+.top-image {
+	background: #FF6D00 url(../assets/hn-dirt.jpg) 50% 50% no-repeat;
+  background-size: contain;
+  height: 500px;
+}

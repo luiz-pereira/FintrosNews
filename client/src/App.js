@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 
 import BlogContainer from './components/BlogContainer';
 
+
 import './styles/App.css';
 
 export default class App extends Component {
@@ -19,7 +20,6 @@ export default class App extends Component {
 	render(){
 		return (
 			<div>
-				
 				<BlogContainer/>		
 			</div>
 		);

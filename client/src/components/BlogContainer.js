@@ -1,13 +1,17 @@
-import React, { Component } from 'react'
+import React, { Component} from 'react'
+
 import BlogPostList from './BlogPostList'
+import NavBar from './NavBar'
+
 import { connect } from 'react-redux'
-import { fetchAllPosts, getPicturesforPost, showNextPage } from '../actions/postActions'
+import { fetchAllPosts, showNextPage } from '../actions/postActions'
 import $ from 'jquery'
 
 class BlogContainer extends Component {
 
 	state = {
-		filter: "all"
+		filter: "all",
+		mode: 'light'
 	}
 
 	componentDidMount = () => {
@@ -22,24 +26,21 @@ class BlogContainer extends Component {
 			}
 	});
 	}
-
-	handleSelect = event => {
-		event.preventDefault()
-		this.setState({filter: event.target.value})
+	
+	handleSelect = filter => {
+		this.setState({filter: filter})
 	}
-	
-	
+
+	handleMode = dark => {
+		dark ? this.setState({mode: 'dark'}) : this.setState({mode: 'light'})
+	}
 
 	render(){
 		return (
 			<div>
-				<label for="filter">Filter results:</label>
-				<select id='filter' onChange={this.handleSelect}>
-					<option value='all'>All</option>
-					<option value='even'>Only Even</option>
-					<option value='odd'>Only Odd</option>
-				</select>
-				<BlogPostList getPicturesforPost={this.props.getPicturesforPost} filter={this.state.filter} showingPosts={this.props.showingPosts}/>
+				<section className='top-image'/>
+				<NavBar modeParent={this.state.mode} handleSelect={this.handleSelect} handleMode={this.handleMode}/>
+				<BlogPostList mode={this.state.mode} filter={this.state.filter} showingPosts={this.props.showingPosts}/>
 				<h4>More Posts...</h4>
 			</div>
 		)
@@ -59,7 +60,6 @@ const mapDispatchToProps = dispatch => {
 	return {
 		fetchAllPosts: () => dispatch(fetchAllPosts()),
 		showNextPage: () => dispatch(showNextPage()),
-		getPicturesforPost: posts => dispatch(getPicturesforPost(posts))
 	}
 }
 
