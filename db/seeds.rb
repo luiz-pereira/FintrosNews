@@ -37,7 +37,7 @@ def img_from_url(url)
 end
 
 
-		# Post.destroy_all
+		Post.destroy_all
 		newstories = []
 		newstories = HTTParty.get('https://hacker-news.firebaseio.com/v0/newstories.json').parsed_response
 		# get next 500
