@@ -10,8 +10,7 @@ class PostsController < ApplicationController
 			Post.order(:original_post_id).first.destroy
 		end
 		get_contents
-		@posts = Post.all
-		render json: @posts
+		render status: 200
 	end
 
 	def all_posts
