@@ -5,7 +5,7 @@ Rails.application.routes.draw do
 		get 'api/posts/refresh' => 'posts#update_post_list'
 		post 'api/posts/test' => 'posts#test'
 
-		get 'api/posts/all' => 'posts#all_post	s'
+		get 'api/posts/all' => 'posts#all_posts'
 
 		post 'api/posts/keep_awake' => 'posts#update_post_list'
 
