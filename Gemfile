@@ -45,6 +45,6 @@ gem "foreman", "~> 0.87.0"
 
 gem "pg", "~> 1.2"
 
-gem "httparty", "~> 0.18.0"
+gem "httparty", "~> 0.21.0"
 
 gem "openssl", "~> 2.1"
